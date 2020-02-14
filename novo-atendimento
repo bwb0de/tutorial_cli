@@ -1,0 +1,16 @@
+#!/bin/bash
+
+DB="info-atendimentos"
+
+echo "Nome:"
+read -r NOME
+
+echo "Matrícula:"
+read -r MAT
+
+echo "Tipo de atendimento:"
+read -r CURSO
+
+TIMESTAMP=$(date +%Y%m%d)
+
+echo "$TIMESTAMP:$NOME:$MAT:$CURSO" >> "$DB"
